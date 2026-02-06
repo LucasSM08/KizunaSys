@@ -1,0 +1,48 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background: #F8F9FA;
+    background-attachment: fixed;
+    
+}
+
+.navBar
+{
+    display: flex;
+    background-color: #2C3E50;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#logo
+{
+    color: white;
+    font-size: xx-large;
+}
+
+#navAuth{gap: 20px; display: flex;}
+#btnLogin,#btnSignup
+{
+    cursor: pointer;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-color: #7B241C;
+}
+#btnSignup{background-color: #4A5131 !important;}
+
+::-webkit-scrollbar
+{
+    display: none;
+}
