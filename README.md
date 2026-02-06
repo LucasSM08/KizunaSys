@@ -11,7 +11,7 @@ Desenvolver uma plataforma robusta que permite gerir diferentes módulos empresa
 Além de desenvolver um ambiente que permite facilitar e fortaler a colaboração entre pessoas dentro de uma organização.
 
 ## 🛠️ Tecnologias (Em desenvolvimento)
-* **Back-end:** Java
-* **Front-end:** HTML, CSS, JavaScript
-* **Base de Dados:** 
+* **Back-end:** JS
+* **Front-end:** Html + Css + JS
+* **Base de Dados:** MySQL
 * **Licença:** Apache 2.0
