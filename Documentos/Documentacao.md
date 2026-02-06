@@ -1,48 +1,148 @@
-# Documentação Técnica: Kizuna Sys
-**Versão:** 0.0.1 (Pre-Alpha)  
-**Equipa:** Lucas Silva, Filipe Venturinha, Beatriz Figuereido 
-**Estado:** Em Planeamento / Conceção
+# KIZUNA SYS 絆
 
-2. Definição do Conceito & Requisitos
-*O que o sistema TEM de fazer. Vai adicionando itens à medida que surgem ideias.*
-Desenvolver uma plataforma robusta que permite gerir diferentes módulos empresariais (como logística e frotas) através de um núcleo centralizado e colaborativo.
-Além de desenvolver um ambiente que permite facilitar e fortaler a colaboração entre pessoas dentro de uma organização.
+## Descrição Geral
+O **KIZUNA SYS** é um ecossistema empresarial modular para gestão do ambiente de trabalho.  
+O sistema permite a criação de organizações, gestão de utilizadores, cargos e permissões, e a integração de módulos independentes que podem ser ativados ou desativados conforme as necessidades de cada empresa.
 
-### Requisitos Funcionais (O que o software faz)
-- [ ] **RF01 - Gestão Multi-Tenant:** O sistema deve isolar dados de diferentes empresas.
-- [ ] **RF02 - Módulos (plug-in) :** Deve permitir a adicição configuração e remoção de modulos de forma simples.
-
-### Requisitos Não-Funcionais (Qualidade técnica)
-- [x] **RNF01 - Licenciamento:** O projeto deve utilizar Apache License 2.0.
-- [ ] **RNF02 - Segurança:** As passwords devem ser encriptadas na BD.
-- [ ] **RNF03 - Performance:** O Kernel deve processar logs em menos de 100ms.
-
-## Arquitetura do Sistema
-*Explicação técnica das escolhas. Preenche quando consolidares a ideia.*
-
-- **Base de Dados:** PostgreSQL (Justificação: Suporte a JSONB para módulos flexíveis).
-- **Kernel/Engine:** [C++ / Node.js / etc]
-- **Interface:** [Web / Desktop / Mobile]
-
-## Modelo de Dados (Base de Dados)
-*Lista as tabelas principais que fores criando.*
-
-1. **Table `tenants`:** Guarda as empresas clientes.
-2. **Table `users`:** Utilizadores do sistema vinculados a um tenant.
-3. **Table `assets`:** Veículos ou equipamentos monitorizados.
-4. [ADICIONAR NOVA TABELA]
+O projeto foca-se numa abordagem **ativa e adaptativa**, com forte ênfase em organização de dados, experiência do utilizador e arquitetura escalável.
 
 ---
 
-## Dificuldades & Soluções (Brainstorming)
-*Sempre que bateres com a cabeça na parede, anota aqui. É o que dá mais nota na PAP.*
+## Objetivos do Projeto
 
-- **Problema:** [Ex: Erro ao ligar o C++ ao PostgreSQL]
-- **Solução:** [Ex: Instalada a biblioteca libpq e configuradas as permissões de acesso]
+### Objetivo Principal
+Criar um ecossistema empresarial modular que permita:
+- Gerir utilizadores, organizações e ambientes de trabalho
+- Adaptar funcionalidades através de módulos
+- Controlar acessos através de cargos e permissões
+- Evoluir progressivamente ao longo do tempo
 
-## Como Correr o Projeto (Notas de Dev)
-*Instruções rápidas para ti próprio ou para o júri.*
+### Objetivos Secundários
+- Desenvolver competências de programação
+- Aplicar boas práticas de organização de projeto
+- Trabalhar em equipa 
+- Criar um sistema realista e utilizável
 
-1. Clonar o repo.
-2. Configurar a BD no ficheiro `.env`.
-3. [ADICIONAR PASSO]
+---
+
+## Conceito Central
+
+- Sistema **modular**
+- Cada organização escolhe os módulos que utiliza
+- Cada módulo possui:
+  - regras próprias
+  - permissões específicas
+  - workspace próprio
+- Estrutura pensada para crescimento contínuo
+
+---
+
+## Stack Tecnológica
+
+### Front-end
+- HTML5
+- CSS3
+- JavaScript
+
+### Back-end
+- JavaScript
+- Node.js
+- Express.js
+
+### Base de Dados
+- MySQL 
+
+---
+
+## Organização Geral do Sistema
+
+### Utilizadores
+- Criação de conta individual
+- Autenticação (login/logout)
+- Um utilizador pode:
+  - criar organizações
+  - entrar em organizações como colaborador
+
+### Organizações
+- Cada organização possui:
+  - utilizadores
+  - cargos
+  - permissões
+  - módulos ativos
+- Um utilizador pode pertencer a várias organizações
+
+### Cargos e Permissões (Fase Inicial)
+- Sistema base de permissões
+- Definição de cargos iniciais
+- Controle de acesso a módulos e funcionalidades
+
+---
+
+## Workspace
+
+- Tela inicial após login
+- Visualização das organizações
+- Acesso aos módulos ativos
+- Interface pensada para escalabilidade futura
+
+---
+
+## Sistema Modular
+
+- Módulos podem ser:
+  - adicionados
+  - removidos
+  - ativados/desativados
+- Acesso aos módulos depende:
+  - do cargo
+  - das permissões
+- Cada módulo possui um workspace próprio
+
+---
+
+## Organização do Projeto (Equipa)
+
+### Ferramentas
+- **GitHub**: código, versionamento e issues
+- **Discord**:
+  - canal geral
+  - organização da equipa
+- **Figma**:
+  - UI / UX
+  - protótipos
+  - identidade visual
+
+---
+
+## Estrutura de Desenvolvimento
+
+O projeto está dividido em **fases evolutivas**, permitindo crescimento contínuo e melhoria progressiva do sistema.
+
+---
+
+## Fase 1 — Fundação do Sistema (Atual)
+
+### Objetivo da Fase
+Criar a base funcional do sistema.
+
+### Funcionalidades Planeadas
+- UI / UX base
+- Sistema de login e criação de conta
+- Criação e gestão de organizações
+- Workspace inicial
+- Sistema inicial de cargos e permissões
+- Implementação do primeiro módulo simples
+- Definição da arquitetura modular
+
+---
+
+## Estado Atual
+- Conceito definido
+- Stack tecnológica definida
+- Organização da equipa estabelecida
+- Planeamento da Fase 1 em andamento
+
+---
+
+## Nota Final
+O KIZUNA SYS foi concebido para **funcionar cedo**, mas **evoluir ao longo do tempo**, garantindo flexibilidade, qualidade e impacto real como projeto de conclusão de curso (PAP).
